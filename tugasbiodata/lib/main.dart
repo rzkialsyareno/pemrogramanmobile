@@ -24,12 +24,7 @@ class BiodataPage extends StatelessWidget {
   const BiodataPage({super.key});
 
   void _simpanData() {
-    print('===================================');
-    print('Data Mahasiswa Berhasil Disimpan!');
-    print('Nama: Rizki Alsyareno');
-    print('NIM: 701230063');
-    print('Cita-cita: Backend Developer');
-    print('===================================');
+    print('Tombol Simpan Berhasil di Klik!');
   }
 
   @override
@@ -53,7 +48,6 @@ class BiodataPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // Icon Profile
                   Container(
                     padding: const EdgeInsets.all(4),
                     decoration: BoxDecoration(
@@ -72,7 +66,6 @@ class BiodataPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 40),
 
-                  // Card Biodata
                   Card(
                     elevation: 8,
                     shape: RoundedRectangleBorder(
@@ -97,7 +90,6 @@ class BiodataPage extends StatelessWidget {
                           ),
                           const SizedBox(height: 24),
 
-                          // Nama
                           _buildInfoRow(
                             icon: Icons.person_outline,
                             label: 'Nama',
@@ -105,7 +97,6 @@ class BiodataPage extends StatelessWidget {
                           ),
                           const SizedBox(height: 16),
 
-                          // NIM
                           _buildInfoRow(
                             icon: Icons.badge_outlined,
                             label: 'NIM',
@@ -113,7 +104,6 @@ class BiodataPage extends StatelessWidget {
                           ),
                           const SizedBox(height: 16),
 
-                          // Cita-cita
                           _buildInfoRow(
                             icon: Icons.rocket_launch_outlined,
                             label: 'Cita-cita',
@@ -125,7 +115,6 @@ class BiodataPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 32),
 
-                  // Button Simpan
                   ElevatedButton(
                     onPressed: _simpanData,
                     style: ElevatedButton.styleFrom(

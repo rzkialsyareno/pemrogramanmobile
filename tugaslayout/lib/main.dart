@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// ========== HALAMAN UTAMA ==========
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -48,7 +47,6 @@ class HomePage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Card Biodata Singkat
                 Card(
                   elevation: 8,
                   shape: RoundedRectangleBorder(
@@ -58,7 +56,6 @@ class HomePage extends StatelessWidget {
                     padding: const EdgeInsets.all(24.0),
                     child: Column(
                       children: [
-                        // Icon Profile dengan Row
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -85,7 +82,6 @@ class HomePage extends StatelessWidget {
                         ),
                         const SizedBox(height: 20),
 
-                        // Biodata Singkat
                         Text(
                           'BIODATA MAHASISWA',
                           style: TextStyle(
@@ -97,7 +93,6 @@ class HomePage extends StatelessWidget {
                         ),
                         const SizedBox(height: 20),
 
-                        // Info Singkat dengan Row
                         Row(
                           children: [
                             Icon(Icons.person_outline,
@@ -162,10 +157,8 @@ class HomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 32),
 
-                // Button Lihat Detail
                 ElevatedButton.icon(
                   onPressed: () {
-                    // Navigator.push untuk pindah ke halaman detail
                     Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -204,7 +197,6 @@ class HomePage extends StatelessWidget {
   }
 }
 
-// ========== HALAMAN DETAIL ==========
 class DetailPage extends StatelessWidget {
   const DetailPage({super.key});
 
@@ -233,7 +225,6 @@ class DetailPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Card Detail Lengkap
                 Card(
                   elevation: 8,
                   shape: RoundedRectangleBorder(
@@ -243,7 +234,6 @@ class DetailPage extends StatelessWidget {
                     padding: const EdgeInsets.all(24.0),
                     child: Column(
                       children: [
-                        // Icon Profile Besar
                         Container(
                           padding: const EdgeInsets.all(4),
                           decoration: BoxDecoration(
@@ -276,7 +266,6 @@ class DetailPage extends StatelessWidget {
                         ),
                         const Divider(height: 32, thickness: 2),
 
-                        // Detail Lengkap dengan Column
                         _buildDetailRow(
                           icon: Icons.person_outline,
                           label: 'Nama Lengkap',
@@ -323,16 +312,11 @@ class DetailPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 32),
 
-                // Button Kembali
                 ElevatedButton.icon(
                   onPressed: () {
-                    // Navigator.pop untuk kembali ke halaman sebelumnya
                     Navigator.pop(context);
 
-                    // Print ke console
-                    print('===================================');
-                    print('Kembali ke Halaman Utama');
-                    print('===================================');
+                    print('Tombol Kembali ke Halaman Utama Berhasil di Klik!');
                   },
                   icon: const Icon(Icons.arrow_back),
                   label: const Text(
